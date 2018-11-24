@@ -4,6 +4,8 @@
 #
 #License Info
 #
+#start a library's contents with the following line
+##SOF##
 
 ##MODULE_NAME_1     [note: no spaces allowed]
 #place your code for this module here.

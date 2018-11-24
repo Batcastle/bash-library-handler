@@ -3,6 +3,7 @@
 #Shebangs are not necissary due to the fact that no code will be run directly from this file
 #
 # -*- coding: utf-8 -*-
+#
 #  Copyright 2018 Thomas Castleman <draugeros@gmail.com>
 #  
 #  This program is free software; you can redistribute it and/or modify
@@ -20,6 +21,9 @@
 #  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #  MA 02110-1301, USA.
 #
+
+#start a library's contents with the following line
+##SOF##
 
 #The below code adds the GOTO command to a bash script
 #this gives no output
