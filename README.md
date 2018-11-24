@@ -8,7 +8,7 @@ Bash Library handler. This program will import libraries written in BASH (MAYBE 
 
 Most of this will be written in BASH for simplicity's sake, but do not expect all of it to be like that. There very well may be parts in Python, C++, C, or some other language.
 
-##USAGE
+#   USAGE
 first, a programmer will be able to pass 2 values to import:
 #   library path and name
 Pass the library name along with the path to it, if it is not in the same directory that import will end up working. It is advised to pass the path, to ensure it works properly
