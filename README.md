@@ -21,9 +21,11 @@ This means usage will be defined as:
 
 Wheras running modules from these libraries will be done as:
 
-   `$var $foo $foobar`
+   `import="data to be passed"`
+   
+   `eval $var`
 
-Where $foo and $foobar are variables containing some code.
+Where $import is some variable containing the necissary data for the module to work.
 Modules will set their output (if there is any) to the OUTPUT variable, followed by the order it was generated (OUTPUT0 first, OUTPUT1 second, etc)
 
 ##NOTE

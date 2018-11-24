@@ -31,7 +31,8 @@
 #   var=$(import /path/to/library/foo foobar)
 #
 #Wheras running modules from these libraries will be done as:
-#   $var $foo $foobar
+#   input="data to be passed"
+#   eval "$var"
 #Where $foo and $foobar are variables containing some code.
 #Modules will set their output to the OUTPUT variable, followed by order it was generated (OUTPUT0 first, OUTPUT1 second, etc)
 #
