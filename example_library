@@ -23,10 +23,10 @@
 #The below code adds the GOTO command to a bash script
 #this gives no output
 #GOTO
-label=$1
-cmd=$(sed -n "/$label:/{:a;n;p;ba};" $0 | grep -v ':$')
-eval "$cmd"
-exit
+label="$1";
+cmd=$(sed -n "/$label:/{:a;n;p;ba};" $0 | grep -v ':$');
+eval "$cmd";
+exit 0;
 #the below line will denote that the module is complete
 ##;;##
 #the below line will denote that the library is complete
