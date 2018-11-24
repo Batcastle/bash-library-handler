@@ -20,14 +20,19 @@
 #  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #  MA 02110-1301, USA.
 #
+
 #The below code adds the GOTO command to a bash script
 #this gives no output
-#GOTO
+#just make sure the file that you are using this in is being called as /path/to/file.sh
+#and not ./file.sh
+
+##GOTO
 label="$input";
 cmd=$(sed -n "/$label:/{:a;n;p;ba};" $0 | grep -v ':$');
 eval "$cmd";
 exit 0;
 #the below line will denote that the module is complete
 ##;;##
+
 #the below line will denote that the library is complete
 ##EOF##

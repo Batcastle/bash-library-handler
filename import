@@ -41,13 +41,19 @@
 #NOTE
 #   If no module name is passed to import, it will be assumed that the user wants the entire library passed. At which point, it will be. 
 #   It then falls to the user to parse these libraries
+
+#get values needed
 x=$1
 y=$2
 contents=$(cat "$x")
+
+#check to see if the user asked for a specific module
 if [ -z "$y" ]; then
+    #if not, pass them the while library and quit
     echo "$contents"
     exit 0
 fi
-output=$(echo "$contents" | sed -n "/#$y/,/##;;##/{/#$y/b;/##;;##/b;p}")
+#otherwise, do all this
+output=$(echo "$contents" | sed -n "/##$y/,/##;;##/{/##$y/b;/##;;##/b;p}")
 echo $output
 exit 0
