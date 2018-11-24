@@ -11,16 +11,18 @@ Most of this will be written in BASH for simplicity's sake, but do not expect al
 ##USAGE
 first, a programmer will be able to pass 2 values to import:
 #   library path and name
-       Pass the library name along with the path to it, if it is not in the same directory that import will end up working. It is advised to pass the path, to ensure it works properly
+Pass the library name along with the path to it, if it is not in the same directory that import will end up working. It is advised to pass the path, to ensure it works properly
 
 #   module name
-       modules will be denoted using specific names, which will allow them to be isolated and passed back to the calling function
-
+modules will be denoted using specific names, which will allow them to be isolated and passed back to the calling function
 This means usage will be defined as:
+
    `var=$(import /path/to/library/foo foobar)`
 
 Wheras running modules from these libraries will be done as:
+
    `$var $foo $foobar`
+
 Where $foo and $foobar are variables containing some code.
 Modules will set their output (if there is any) to the OUTPUT variable, followed by the order it was generated (OUTPUT0 first, OUTPUT1 second, etc)
 
