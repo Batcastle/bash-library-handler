@@ -23,7 +23,6 @@
 #The below code adds the GOTO command to a bash script
 #this gives no output
 #GOTO
-echo "$input"
 label="$input";
 cmd=$(sed -n "/$label:/{:a;n;p;ba};" $0 | grep -v ':$');
 eval "$cmd";
