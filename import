@@ -47,3 +47,6 @@ if [ -z "$y" ]; then
     echo "$contents"
     exit 0
 fi
+output=$(echo "$contents" | sed -n "/$y/,/##;;##/{/$y/b;/##;;##/b;p}")
+echo $output
+exit 0
