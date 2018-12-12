@@ -10,7 +10,7 @@
 ##MODULE_NAME_1     [note: no spaces allowed]
 #place your code for this module here.
 #do not define it as a function. Write it as a stand alone script
-#make sure you put a semi-colon at the end of each line
+#make sure you put a semi-colon at the end of each line, where it would still run if needed 
 #make sure to comment your code
 var="Write your code something like this."
 var2="Set output variables to OUTPUT(number of output)"
@@ -18,7 +18,7 @@ OUTPUT0="Like this"
 OUTPUT1="Continue counting"
 OUTPUT2="etc"
 exit 0
-#use the following string to end a module
+#use the following line to end a module
 ##;;##
 
 #just continue on like that
@@ -37,7 +37,7 @@ var3="output is entirely optional"
 Further notes:
 
 * Do not make libraries executable. This presents a security issue and is completly unnecissary due to the code being ran inside a variable
-* If you need to make a funtion inside a module, go ahead and try making that function into a module too, just for future use
+* If you need to make a funtion inside a module, go ahead and try making that function into a module too, just for future use, but DO NOT call that new module instead of using the original function
 * the file name is the library name. So, if the file name is "stupid_bash_lib" then the library name is "stupid_bash_lib".
 * if you wish to add more info or documentation, feel free. Just don't forget to comment it out.
 * if you wish to clearsign a library for copyright reasons, feel free to do so. Just make sure that the library is re-clearsigned with each update

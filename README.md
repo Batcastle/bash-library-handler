@@ -6,7 +6,7 @@
 ---
 Bash Library handler. This program will import libraries written in BASH (MAYBE other scripting langauges), written for BASH, and allow a programmer to use them in any program.
 
-Most of this will be written in BASH for simplicity's sake, but do not expect all of it to be like that. There very well may be parts in Python, C++, C, or some other language.
+Most of this will be written in BASH for simplicity's sake, but do not expect all of it to be like that. There very well may be parts in Python, C++, C, or some other language if functionality requires it.
 
 #   USAGE
 first, a programmer will be able to pass 2 values to import:
@@ -21,11 +21,11 @@ This means usage will be defined as:
 
 Wheras running modules from these libraries will be done as:
 
-   `import="data to be passed"`
+   `input="data to be passed"`
    
    `eval $var`
 
-Where $import is some variable containing the necissary data for the module to work.
+Where $input is some variable containing the necissary data for the module to work.
 Modules will set their output (if there is any) to the OUTPUT variable, followed by the order it was generated (OUTPUT0 first, OUTPUT1 second, etc)
 
 ##NOTE
