@@ -3,7 +3,7 @@
 #
 #  import
 #  
-#  Copyright 2018 Thomas Castleman <draugeros@gmail.com>
+#  Copyright 2019 Thomas Castleman <contact@draugeros.org>
 #  
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -49,11 +49,20 @@ contents=$(cat "$x" | sed -n "/##SOF##/,/##EOF##/{/##SOF##/b;/##EOF##/b;p}")
 
 #check to see if the user asked for a specific module
 if [ -z "$y" ]; then
-    #if not, pass them the while library and quit
-    echo "$contents"
-    exit 0
+	#if not, pass them the whole library and quit
+	echo "$contents"
+	exit 0
+#also, check to see if they just want a list of all the modules in the lib
+elif [ "$y" == "--list" ]; then
+	#if they do, figure that out, pass it back, and exit
+	output=$(echo "$contents" | grep '##')
+	output=$(echo "$output" | sed 's/##;;##//g')
+	output=$(echo "$output" | sed 's/##//g')
+	echo "$output"
+	exit 0
+else
+	#otherwise, do all this
+	output=$(echo "$contents" | sed -n "/##$y/,/##;;##/{/##$y/b;/##;;##/b;p}")
+	echo $output
+	exit 0
 fi
-#otherwise, do all this
-output=$(echo "$contents" | sed -n "/##$y/,/##;;##/{/##$y/b;/##;;##/b;p}")
-echo $output
-exit 0
