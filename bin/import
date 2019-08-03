@@ -55,9 +55,7 @@ if [ -z "$y" ]; then
 #also, check to see if they just want a list of all the modules in the lib
 elif [ "$y" == "--list" ]; then
 	#if they do, figure that out, pass it back, and exit
-	output=$(echo "$contents" | grep '##')
-	output=$(echo "$output" | sed 's/##;;##//g')
-	output=$(echo "$output" | sed 's/##//g')
+	output=$(echo "$contents" | grep '##' | sed 's/##;;##//g' | sed 's/##//g')
 	echo "$output"
 	exit 0
 else
